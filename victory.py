@@ -41,7 +41,8 @@ quest_items = random.sample(list(birtday.items()), 5)
 print(quest_items)
 for i in range(len(quest_items)):
     quest_user = input(f'{''.join(quest_items[i][0])} - укажите дату рождения в формате dd.mm.yyyy: ')
-
+    if quest_items[i][1] == True:
+        print('Правильный ответ!')
 
 
 
