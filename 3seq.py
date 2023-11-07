@@ -16,7 +16,7 @@ delimiters = r'[,;/ ]' # допускаем 4 разделителя, включ
 user_item_1 = re.split(delimiters, user_item_1)
 user_item_2 = re.split(delimiters, user_item_2)
 
-# 1-й способ преобразуем в множества, вычитаем, преобразуем обратнов список
+# 1-й способ преобразуем в множества, вычитаем, преобразуем обратно в список
 list_result = list(set(user_item_1) - set(user_item_2))
 list_result.sort()
 print('1-й способ: ', ','.join(list_result))
