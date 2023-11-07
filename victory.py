@@ -36,13 +36,15 @@ birtday = {
     'Владимир Путин': '07.10.1952',
     'Джозеф Байден-младший': '20.11.1942',
 }
-
+catch0 = 0 # счётчик правильных ответов
+catch1 = 0 # счётчик неправильных ответов
 quest_items = random.sample(list(birtday.items()), 5)
 print(quest_items)
 for i in range(len(quest_items)):
     quest_user = input(f'{''.join(quest_items[i][0])} - укажите дату рождения в формате dd.mm.yyyy: ')
     if quest_items[i][1] == quest_user:
-        print('Правильный ответ!')
+        catch0 += 1
+        print(f'Правильный ответ! Счётчик: {catch0}')
 
 
 
