@@ -53,7 +53,6 @@ month_list = ['января', 'февраля', 'марта', 'апреля', '�
 catch0 = 0 # счётчик правильных ответов
 catch1 = 0 # счётчик неправильных ответов
 quest_items = random.sample(list(birtday.items()), 5)
-print(quest_items)
 
 for i in range(len(quest_items)):
     quest_user = input(f'{''.join(quest_items[i][0])} - укажите дату рождения в формате dd.mm.yyyy: ')
