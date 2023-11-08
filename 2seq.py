@@ -23,6 +23,7 @@ for item in user_item:
     if user_item.count(item) == 1:
         unique_item.append(item)
 
+unique_item.sort()
 print (','.join(unique_item))
 
 
