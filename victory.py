@@ -54,53 +54,19 @@ catch0 = 0 # счётчик правильных ответов
 catch1 = 0 # счётчик неправильных ответов
 quest_items = random.sample(list(birtday.items()), 5)
 print(quest_items)
+
 for i in range(len(quest_items)):
     quest_user = input(f'{''.join(quest_items[i][0])} - укажите дату рождения в формате dd.mm.yyyy: ')
     if quest_items[i][1] == quest_user:
         catch0 += 1
-        print(f'Верно! Правильных ответов: {catch0}')
+        print('Верно!')
     else:
-        print(f'Неверно! Правильный ответ: {quest_items[i][1]}')
+        catch1 += 1
+        cor_answ = quest_items[i][1].split('.') # превращаем правильный ответ в список
+        cor_answ = (f'Неверно! '
+                    f'Правильный ответ: {day_list[int(cor_answ[0])-1]} {month_list[int(cor_answ[1])-1]} {cor_answ[2]} года')
+        print(cor_answ)
 
+print(f'Правильных ответов: {catch0} ({int(catch0*100/5)}%)')
+print(f'Неправильных ответов: {catch1} ({int(catch1*100/5)}%)')
 
-
-
-# quest = input(f'Укажите дату рождения {random.sample(birtday.keys(),1)}')
-
-
-
-'''
-birth_Pushkin = int(input("Укажите дату рождения Александра Пушкина: ")) # 06.06.1799
-birth_Einstein = int(input("Укажите дату рождения Альберта Эйнштейна: ")) # 1879
-birth_Tesla = int(input("Укажите дату рождения Николы Тесла: ")) # 1856
-birth_Jobs = int(input("Укажите дату рождения Стива Джобса: ")) # 1955
-birth_Turing = int(input("Укажите дату рождения Алана Тьюринга: ")) # 1912
-catch0 = 0 # счётчик правильных ответов
-catch1 = 0 # счётчик неправильных ответов
-
-if yearPushkin == 1799:
-    catch0 += 1
-else:
-    catch1 += 1
-if yearEinstein == 1879:
-    catch0 += 1
-else:
-    catch1 += 1
-if yearTesla == 1856:
-    catch0 += 1
-else:
-    catch1 += 1
-if yearJobs == 1955:
-    catch0 += 1
-else:
-    catch1 += 1
-if yearTuring == 1912:
-    catch0 += 1
-else:
-    catch1 += 1
-
-print("Кол-во правильных ответов:", catch0)
-print("Кол-во ошибок:", catch1)
-print("Процент правильных ответов:", catch0*100/5)
-print("Процент неправильных ответов:", catch1*100/5)
-'''
